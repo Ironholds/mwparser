@@ -1,7 +1,3 @@
-get_wikitext <- function(url){
-
-}
-
 #'@title Read Wikitext
 #'
 #'@description Initially reads and parses a pile of wikitext,
@@ -16,9 +12,11 @@ get_wikitext <- function(url){
 #'@examples
 #'# Simple example
 #'wt <- "==this is a header==\n with {{a|template}}"
-#'parsed <- read_wikitext("wt")
+#'parsed <- read_wikitext(wt)
 #'
 #'@export
 read_wikitext <- function(wikitext, skip_styles = FALSE){
   out <- mwp_inst$parse(wikitext, skip_style_tags = skip_styles)
+
 }
+
