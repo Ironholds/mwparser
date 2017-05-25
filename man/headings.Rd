@@ -37,7 +37,7 @@ various attributes from wikimarkup.
 
 # Get wikitext
 wt <- "==this is a header==\\n with {{a|template}}"
-parsed <- read_wikitext(wt)
+parsed <- parse_wikitext(wt)
 
 # Extract headings
 headings <- get_headings(parsed)

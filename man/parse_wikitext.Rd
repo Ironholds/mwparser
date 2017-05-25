@@ -20,6 +20,6 @@ turning it into an object that can have elements extracted from it.
 \examples{
 # Simple example
 wt <- "==this is a header==\\n with {{a|template}}"
-parsed <- read_wikitext(wt)
+parsed <- parse_wikitext(wt)
 
 }

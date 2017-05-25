@@ -12,7 +12,7 @@
 #'@examples
 #'# Simple example
 #'wt <- "==this is a header==\n with {{a|template}}"
-#'parsed <- read_wikitext(wt)
+#'parsed <- parse_wikitext(wt)
 #'
 #'@export
 parse_wikitext <- function(wikitext, skip_styles = FALSE){

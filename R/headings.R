@@ -24,7 +24,7 @@
 #'
 #'# Get wikitext
 #'wt <- "==this is a header==\n with {{a|template}}"
-#'parsed <- read_wikitext(wt)
+#'parsed <- parse_wikitext(wt)
 #'
 #'# Extract headings
 #'headings <- get_headings(parsed)
@@ -43,9 +43,10 @@ get_headings <- function(wt, recursive = TRUE){
 #'@rdname headings
 #'@export
 heading_level <- function(headings){
-  return(lapply(headings, function(x){
+  return(unlist(lapply(headings, function(x){
     return(x$level)
-  }))
+  })))
+
 }
 
 #'@rdname headings
