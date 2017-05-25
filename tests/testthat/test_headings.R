@@ -25,3 +25,21 @@ testthat::test_that("Header levels can be extracted", {
   testthat::expect_length(extracted, 2)
   testthat::expect_equal(levels, c(2, 3))
 })
+
+testthat::test_that("Header title can be extracted", {
+  skip_if()
+  parsed <- parse_wikitext(wt)
+  extracted <- get_headings(parsed)
+  titles <- heading_title(extracted)
+  testthat::expect_length(extracted, 2)
+})
+
+testthat::test_that("Header title can be extracted", {
+  skip_if()
+  parsed <- parse_wikitext(wt)
+  extracted <- get_headings(parsed)
+  titles <- heading_title(extracted, as_character = TRUE)
+  testthat::expect_length(titles, 2)
+  testthat::expect_equal(titles,
+                         c("this is a header", "andanother"))
+})

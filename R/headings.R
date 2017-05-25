@@ -51,12 +51,19 @@ heading_level <- function(headings){
 
 #'@rdname headings
 #'@export
-heading_title <- function(headings, as_text = FALSE){
-  return(lapply(headings, function(x, as_text){
+heading_title <- function(headings, as_character = FALSE){
+  out <- lapply(headings, function(x, as_character){
     result <- x$title
-    if(as_text){
-      return(as_text(result))
+    if(as_character){
+      return(result$strip_code())
     }
     return(result)
-  }))
+  }, as_character = as_character)
+
+  if(as_character){
+    return(unlist(out))
+  }
+
+  return(out)
+
 }
