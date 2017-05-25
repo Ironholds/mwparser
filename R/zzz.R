@@ -1,6 +1,6 @@
 mwp_inst <- NULL
 
-#'@importFrom reticulate py_available
-.onLoad <- function() {
-  mwp_inst <<- import("mwparserfromhell", delay_load = TRUE)
+#'@importFrom reticulate py_available import
+.onLoad <- function(libname, pkgname) {
+  mwp_inst <<- reticulate::import("mwparserfromhell", delay_load = TRUE)
 }

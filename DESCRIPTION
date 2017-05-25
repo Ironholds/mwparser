@@ -1,11 +1,13 @@
 Package: mwparser
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Wikimarkup parser
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
+Author: Oliver Keyes [aut, cre]
+Maintainer: Oliver Keyes <ironholds@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.0.1
+Imports: reticulate
