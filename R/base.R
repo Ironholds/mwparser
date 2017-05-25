@@ -15,8 +15,7 @@
 #'parsed <- read_wikitext(wt)
 #'
 #'@export
-read_wikitext <- function(wikitext, skip_styles = FALSE){
-  out <- mwp_inst$parse(wikitext, skip_style_tags = skip_styles)
-
+parse_wikitext <- function(wikitext, skip_styles = FALSE){
+  return(mwp_inst$parse(wikitext, skip_style_tags = skip_styles))
 }
 

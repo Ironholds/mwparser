@@ -1,6 +1,4 @@
-get_headings <- function(wt, recursive = TRUE){
-  wt$filter_headings(recursive = recursive)
-}
+
 
 get_external_links <- function(wt, recursive = TRUE){
   wt$filter_external_links(recursive = recursive)
