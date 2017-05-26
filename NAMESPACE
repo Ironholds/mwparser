@@ -2,10 +2,13 @@
 
 export(get_headings)
 export(get_templates)
+export(get_wikilinks)
 export(heading_level)
 export(heading_title)
 export(parse_wikitext)
 export(template_names)
 export(template_params)
+export(wikilink_paths)
+export(wikilink_text)
 importFrom(reticulate,import)
 importFrom(reticulate,py_str)
