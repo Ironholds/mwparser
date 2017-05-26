@@ -38,7 +38,7 @@ testthat::test_that("Header title can be extracted", {
   skip_if()
   parsed <- parse_wikitext(wt)
   extracted <- get_headings(parsed)
-  titles <- heading_title(extracted, as_character = TRUE)
+  titles <- heading_title(extracted, text = TRUE)
   testthat::expect_length(titles, 2)
   testthat::expect_equal(titles,
                          c("this is a header", "andanother"))

@@ -68,7 +68,7 @@ template_names <- function(templates, text = FALSE){
     return(holding)
   }, text = text)
 
-  if(as_character){
+  if(text){
     return(unlist(out))
   }
 
