@@ -17,8 +17,8 @@
 #'@param recursive whether to recursively extract
 #'headings. TRUE by default.
 #'
-#'@param as_text whether to return the heading titles
-#'as text. TRUE by default.
+#'@param text whether to return the heading titles
+#'as text. FALSE by default.
 #'
 #'@examples
 #'
@@ -51,16 +51,16 @@ heading_level <- function(headings){
 
 #'@rdname headings
 #'@export
-heading_title <- function(headings, as_character = FALSE){
-  out <- lapply(headings, function(x, as_character){
+heading_title <- function(headings, text = FALSE){
+  out <- lapply(headings, function(x, text){
     result <- x$title
-    if(as_character){
+    if(text){
       return(result$strip_code())
     }
     return(result)
-  }, as_character = as_character)
+  }, text = text)
 
-  if(as_character){
+  if(text){
     return(unlist(out))
   }
 

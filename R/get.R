@@ -8,10 +8,7 @@ get_comments <- function(wt, recursive = TRUE){
   wt$filter_comments(recursive = recursive)
 }
 
-get_templates <- function(wt, recursive = TRUE){
-  wt$filter_templates(recursive = recursive)
 
-}
 
 get_wikilinks <- function(wt, recursive = TRUE){
   wt$filter_wikilinks(recursive = recursive)
