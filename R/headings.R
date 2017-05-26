@@ -20,6 +20,10 @@
 #'@param text whether to return the heading titles
 #'as text. FALSE by default.
 #'
+#'@seealso \code{\link{templates}}, \code{\link{external_links}} and
+#'\code{\link{wikilinks}} for extractors for other types of
+#'wikimarkup.
+#'
 #'@examples
 #'
 #'# Get wikitext

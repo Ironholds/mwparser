@@ -55,3 +55,8 @@ levels <- heading_level(headings)
 title_text <- heading_title(headings)
 
 }
+\seealso{
+\code{\link{templates}}, \code{\link{external_links}} and
+\code{\link{wikilinks}} for extractors for other types of
+wikimarkup.
+}

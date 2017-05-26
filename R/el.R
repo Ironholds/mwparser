@@ -21,6 +21,10 @@
 #'@param text whether to return the results
 #'as a character vector. FALSE by default.
 #'
+#'@seealso \code{\link{templates}}, \code{\link{headings}} and
+#'\code{\link{wikilinks}} for extractors for other types of
+#'wikimarkup.
+#'
 #'@examples
 #'
 #'# Get wikitext

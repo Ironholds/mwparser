@@ -49,3 +49,8 @@ temp_names <- template_names(templates)
 parameter_vals <- template_params(templates)
 
 }
+\seealso{
+\code{\link{headers}}, \code{\link{external_links}} and
+\code{\link{wikilinks}} for extractors for other types of
+wikimarkup.
+}

@@ -50,3 +50,8 @@ paths <- wikilink_paths(wls)
 display_text <- wikilink_text(wls)
 
 }
+\seealso{
+\code{\link{templates}}, \code{\link{external_links}} and
+\code{\link{headings}} for extractors for other types of
+wikimarkup.
+}
