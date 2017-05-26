@@ -4,7 +4,7 @@
 #'
 #'@description Wikimarkup contains internal (wiki) links,
 #'stored as a page name and a display title, separated
-#'by pipes, with the whole thing wrapped in a pair of
+#'by pipes, with the whole thing wrapped in two pairs of
 #'square brackets.
 #'These functions allow you to extract wikilinks and their
 #'various attributes from wikimarkup.
