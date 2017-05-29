@@ -11,7 +11,7 @@ wt <- "==this is a header==\n with {{a|template}}\n===andanother==="
 
 
 testthat::test_that("Headers can be extracted", {
-  skip_if()
+  #skip_if()
   parsed <- parse_wikitext(wt)
   extracted <- get_headings(parsed)
   testthat::expect_length(extracted, 2)
