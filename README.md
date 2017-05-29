@@ -5,6 +5,8 @@ __Author:__ Oliver Keyes<br/>
 __License:__ [MIT](http://opensource.org/licenses/MIT)<br/>
 __Status:__ In development
 
+[![Travis-CI Build Status](https://travis-ci.org/Ironholds/mwparser.svg?branch=master)](https://travis-ci.org/Ironholds/mwparser)
+
 ### Description
 
 Wikimarkup is the language used on Wikipedia and similar projects, and as such contains
