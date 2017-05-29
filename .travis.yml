@@ -2,6 +2,7 @@ language: r
 warnings_are_errors: false
 sudo: required
 dist: trusty
+cache: packages
 
 python:
   - "pypy"
@@ -16,6 +17,7 @@ env:
 r_packages:
    - testthat
    - reticulate
+   - devtools
 notifications:
   email:
     on_failure: change
