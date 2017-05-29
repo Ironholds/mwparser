@@ -5,7 +5,6 @@ dist: trusty
 cache: packages
 
 python:
-  - "pypy"
   - "2.7"
 
 install:
