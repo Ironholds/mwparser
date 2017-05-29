@@ -20,12 +20,12 @@
 #'@param text whether to return the template parameters
 #'as character vectors. FALSE by default.
 #'
-#'@seealso \code{\link{headers}}, \code{\link{external_links}} and
+#'@seealso \code{\link{headings}}, \code{\link{external_links}} and
 #'\code{\link{wikilinks}} for extractors for other types of
 #'wikimarkup.
 #'
 #'@examples
-#'
+#'\dontrun{
 #'# Get wikitext
 #'wt <- "this is {{a|template|okay?}}"
 #'parsed <- parse_wikitext(wt)
@@ -38,22 +38,7 @@
 #'
 #'# Get the actual parameter values
 #'parameter_vals <- template_params(templates)
-#'
-#'@export
-get_headings <- function(wt, recursive = TRUE){
-  return(wt$filter_headings(recursive = recursive))
-}
-
-#'@rdname headings
-#'@export
-heading_level <- function(headings){
-  return(unlist(lapply(headings, function(x){
-    return(x$level)
-  })))
-
-}
-
-#'@rdname headings
+#'}
 #'@export
 get_templates <- function(wt, recursive = TRUE){
   wt$filter_templates(recursive = recursive)

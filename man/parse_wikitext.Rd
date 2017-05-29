@@ -7,8 +7,7 @@
 parse_wikitext(wikitext, skip_styles = FALSE)
 }
 \arguments{
-\item{wikitext}{a pile of wikitext, as a string, grabbed via
-\code{\link{get_wikitext}} or through any other way}
+\item{wikitext}{a pile of wikitext, as a string.}
 
 \item{skip_styles}{whether to skip style tags, which (very
 occasionally) cause parsing problems. \code{FALSE} by default.}
@@ -18,8 +17,9 @@ Initially reads and parses a pile of wikitext,
 turning it into an object that can have elements extracted from it.
 }
 \examples{
+\dontrun{
 # Simple example
 wt <- "==this is a header==\\n with {{a|template}}"
 parsed <- parse_wikitext(wt)
-
+}
 }

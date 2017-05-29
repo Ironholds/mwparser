@@ -22,9 +22,6 @@ link_urls(external_links, text = FALSE)
 
 \item{text}{whether to return the results
 as a character vector. FALSE by default.}
-
-\item{recursive}{whether to recursively extract
-external links. TRUE by default.}
 }
 \description{
 Wikimarkup contains external links,
@@ -35,6 +32,7 @@ These functions allow you to extract external URLs and their
 various attributes from wikimarkup.
 }
 \examples{
+\dontrun{
 
 # Get wikitext
 wt <- "this is [http://an.external link]"
@@ -47,8 +45,8 @@ wls <- get_external_links(parsed)
 paths <- link_urls(wls)
 
 # Get the display titles
-display_title <- link_title(wls)
-
+display_title <- link_titles(wls)
+}
 }
 \seealso{
 \code{\link{templates}}, \code{\link{headings}} and

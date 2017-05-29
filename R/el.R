@@ -15,9 +15,6 @@
 #'@param external_links a list of external links retrieved with
 #'\code{get_external_links}
 #'
-#'@param recursive whether to recursively extract
-#'external links. TRUE by default.
-#'
 #'@param text whether to return the results
 #'as a character vector. FALSE by default.
 #'
@@ -26,6 +23,7 @@
 #'wikimarkup.
 #'
 #'@examples
+#'\dontrun{
 #'
 #'# Get wikitext
 #'wt <- "this is [http://an.external link]"
@@ -38,8 +36,8 @@
 #'paths <- link_urls(wls)
 #'
 #'# Get the display titles
-#'display_title <- link_title(wls)
-#'
+#'display_title <- link_titles(wls)
+#'}
 #'@export
 get_external_links <- function(wt){
   return(wt$filter_external_links())

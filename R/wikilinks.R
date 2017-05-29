@@ -15,9 +15,6 @@
 #'@param wikilinks a list of wikilinks retrieved with
 #'\code{get_wikilinks}
 #'
-#'@param recursive whether to recursively extract
-#'wikilinks TRUE by default.
-#'
 #'@param text whether to return the results
 #'as a character vector. FALSE by default.
 #'
@@ -25,7 +22,7 @@
 #'\code{\link{headings}} for extractors for other types of
 #'wikimarkup.
 #'@examples
-#'
+#'\dontrun{
 #'# Get wikitext
 #'wt <- "this is [[a|link]]"
 #'parsed <- parse_wikitext(wt)
@@ -38,7 +35,7 @@
 #'
 #'# Get the display text
 #'display_text <- wikilink_text(wls)
-#'
+#'}
 #'@export
 get_wikilinks <- function(wt){
   return(wt$filter_wikilinks())

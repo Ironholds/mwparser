@@ -25,7 +25,7 @@
 #'wikimarkup.
 #'
 #'@examples
-#'
+#'\dontrun{
 #'# Get wikitext
 #'wt <- "==this is a header==\n with {{a|template}}"
 #'parsed <- parse_wikitext(wt)
@@ -38,7 +38,7 @@
 #'
 #'# Get the actual title text
 #'title_text <- heading_title(headings)
-#'
+#'}
 #'@export
 get_headings <- function(wt, recursive = TRUE){
   return(wt$filter_headings(recursive = recursive))

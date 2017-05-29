@@ -22,9 +22,6 @@ wikilink_text(wikilinks, text = FALSE)
 
 \item{text}{whether to return the results
 as a character vector. FALSE by default.}
-
-\item{recursive}{whether to recursively extract
-wikilinks TRUE by default.}
 }
 \description{
 Wikimarkup contains internal (wiki) links,
@@ -35,7 +32,7 @@ These functions allow you to extract wikilinks and their
 various attributes from wikimarkup.
 }
 \examples{
-
+\dontrun{
 # Get wikitext
 wt <- "this is [[a|link]]"
 parsed <- parse_wikitext(wt)
@@ -48,7 +45,7 @@ paths <- wikilink_paths(wls)
 
 # Get the display text
 display_text <- wikilink_text(wls)
-
+}
 }
 \seealso{
 \code{\link{templates}}, \code{\link{external_links}} and
