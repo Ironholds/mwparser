@@ -1,0 +1,15 @@
+language: r
+warnings_are_errors: false
+sudo: required
+dist: trusty
+
+env:
+ global:
+   - CRAN: http://cran.rstudio.com
+
+r_packages:
+   - testthat
+   - reticulate
+notifications:
+  email:
+    on_failure: change
