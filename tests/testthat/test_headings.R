@@ -9,7 +9,6 @@ skip_if <- function() {
 
 wt <- "==this is a header==\n with {{a|template}}\n===andanother==="
 
-
 testthat::test_that("Headers can be extracted", {
   #skip_if()
   parsed <- parse_wikitext(wt)
