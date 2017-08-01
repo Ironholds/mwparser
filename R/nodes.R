@@ -60,7 +60,7 @@ node_type_builder <- function(types){
 #'
 #'parsed_text <- read_wikitext(text)
 #'
-#'some_nodes <- get_nodes(text, types = c("wikilinks", "templates")
+#'some_nodes <- get_nodes(parsed_text, types = c("wikilinks", "templates"))
 #'}
 #'@export
 get_nodes <- function(wikitext, types = c("comments", "external_links",
@@ -76,7 +76,6 @@ get_nodes <- function(wikitext, types = c("comments", "external_links",
          See ?wikitext_nodes for more information")
   }
 
-  # God forgive me
   return(wikitext$filter(forcetype = node_type_builder(types),
                          recursive = recursive))
 }

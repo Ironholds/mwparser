@@ -11,11 +11,10 @@
 #'@examples
 #'\dontrun{
 #'# Simple example
-#'wt <- "==this is a header==\n with {{a|template}}"
-#'parsed <- parse_wikitext(wt)
+#'raw_wikitext <- "==this is a header==\n with {{a|template}}"
+#'wikitext <- read_wikitext(raw_wikitext)
 #'}
 #'@export
-parse_wikitext <- function(wikitext, skip_styles = FALSE){
+read_wikitext <- function(wikitext, skip_styles = FALSE){
   return(mwp_inst$parse(wikitext, skip_style_tags = skip_styles))
 }
-
