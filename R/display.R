@@ -29,6 +29,7 @@ get_displaytext.mwparserfromhell.nodes.heading.Heading <- function(node, as_text
   return(get_displaytext(get_nodes(out, "text"), as_text)[1])
 }
 
+#'@export
 get_displaytext.mwparserfromhell.nodes.external_link.ExternalLink <- function(node, as_text){
   out <- node$title
   if(as_text){
@@ -36,6 +37,11 @@ get_displaytext.mwparserfromhell.nodes.external_link.ExternalLink <- function(no
   }
 
   return(out)
+}
+
+#'@export
+get_displaytext.default <- function(node, as_text){
+  return(NA)
 }
 
 

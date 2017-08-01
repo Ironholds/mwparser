@@ -3,6 +3,8 @@
 S3method(get_dest,default)
 S3method(get_dest,mwparserfromhell.nodes.external_link.ExternalLink)
 S3method(get_dest,mwparserfromhell.nodes.wikilink.Wikilink)
+S3method(get_displaytext,default)
+S3method(get_displaytext,mwparserfromhell.nodes.external_link.ExternalLink)
 S3method(get_displaytext,mwparserfromhell.nodes.heading.Heading)
 S3method(get_displaytext,mwparserfromhell.nodes.template.Template)
 S3method(get_displaytext,mwparserfromhell.nodes.text.Text)
