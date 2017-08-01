@@ -20,7 +20,7 @@ get_dest.mwparserfromhell.nodes.wikilink.Wikilink <- function(node, as_text){
 
 #'@export
 get_dest.default <- function(node, as_text){
-  stop("Only wikilink and external links can have destinations retrieved")
+  return(NA)
 }
 
 #'@title Get the destination of a link
@@ -29,6 +29,25 @@ get_dest.default <- function(node, as_text){
 #'\code{get_dest} will retrieve the destination they
 #'are pointing to.
 #'
+#'@param nodes a set of Wikitext nodes retrieved with
+#'\code{\link{get_nodes}}
+#'
+#'@param as_text whether to return the results as
+#'nodes or strings.
+#'
+#'@return Either a list of nodes or a vector
+#'of strings, depending on \code{as_text}'s value.
+#'
+#'@examples
+#'\dontrun{
+#'library(magrittr)
+#'library(mwparser)
+#'raw_wikitext <- "[http://this.is.a external link]"
+#'
+#'text <- read_wikitext(raw_wikitext) %>%
+#'    get_nodes(types = "external_links") %>%
+#'    get_dest
+#'}
 #'@import methods
 #'@export
 get_dest <- function(nodes, as_text = FALSE){

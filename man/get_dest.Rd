@@ -6,8 +6,30 @@
 \usage{
 get_dest(nodes, as_text = FALSE)
 }
+\arguments{
+\item{nodes}{a set of Wikitext nodes retrieved with
+\code{\link{get_nodes}}}
+
+\item{as_text}{whether to return the results as
+nodes or strings.}
+}
+\value{
+Either a list of nodes or a vector
+of strings, depending on \code{as_text}'s value.
+}
 \description{
 For Wikilink and ExternalLink nodes,
 \code{get_dest} will retrieve the destination they
 are pointing to.
+}
+\examples{
+\dontrun{
+library(magrittr)
+library(mwparser)
+raw_wikitext <- "[http://this.is.a external link]"
+
+text <- read_wikitext(raw_wikitext) \%>\%
+   get_nodes(types = "external_links") \%>\%
+   get_dest
+}
 }
